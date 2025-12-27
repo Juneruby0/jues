@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+   	 <meta charset="utf-8">
+	   <title>CADASTRO DE FUNCIONÁRIO</title>
+         </head>
+       <body>
+	 <h1>Cadastro de Funcionário</h1>
+   <fieldset>
+<legend>
+   <h3>Detalhes Pessoais</h3>
+	 </legend>
+	   <form>
+		 Nome: 
+	  <input type="text" name="nome"><br>
+	Sobrenome:
+  <input type="text" name="sobrenome"><br>
+Data de Nascimento:
+  <input type="date" name="date"><br>
+	</form>
+	  </fieldset>
+	    <fieldset>
+	  <legend>
+	<h3>Detalhes Profissionais</h3>
+  </legend>
+<form>
+  Departamento:
+	<select>
+	  <option>Não Selecionado</option>
+		<option>Administrativo</option>
+	  <option>Financeiro</option>
+	<option>Pessoal</option>
+  <option>Comercial</option>
+<option>Marketing</option>
+  <option>Produção</option>
+	<option>Jurídico</option>
+	  </select><br>
+		Código Funcionário:
+	  <input type="number" name="num" min="1">
+    </form>
+  </fieldset>
+<input type="submit" value="Incluir Funcionário">
+  </body>
+    </html>

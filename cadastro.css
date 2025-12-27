@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.formCadastro {
+  background-color: #e9e6ec;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px black;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formCadastro h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.formCadastro p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formCadastro label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.formCadastro input,
+.formCadastro select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.btn {
+  background-color: #9c7145;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  transition: all linear 160ms;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #926941;
+}
+
+.formCadastro a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.formCadastro a:hover {
+  color: #9c7145;
+}
+
+#erro {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  display: none;
+}

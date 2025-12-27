@@ -1,0 +1,10 @@
+h1{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+body{
+    background-image:url(stayy.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

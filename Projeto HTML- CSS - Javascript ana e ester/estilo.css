@@ -1,0 +1,15 @@
+.menu{
+    word-spacing: 60px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    text-size-adjust: 50px;
+    color:black;
+}
+.rodape{
+    background-color: black;
+    height: 345px;
+    position: relative;
+    color: white;
+}

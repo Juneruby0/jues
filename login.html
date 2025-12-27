@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body background="fundositehist.jpg">
+    
+    <center>
+      <form method="POST" class="formLogin" onsubmit="return validarFormulario()">
+    <h1>Login</h1>
+    <p>Digite os seus dados de acesso no campo abaixo.</p>
+    
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autofocus="true"/>
+    
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" placeholder="Digite sua senha"/>
+    
+    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.nl%2F&dsh=S171135903%3A1749133721041553&ec=futura_exp_og_so_72776762_e&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=pt-BR&ifkv=AdBytiOyKDpYk-RnPLOTHjyDstBa7J_8ISI2k44bu75RrX14PqwMcH_H45ngjdZGn0LCCwfw4kcY">Esqueci minha senha</a>
+    <a href="cadastro.html">Não é cadastrado? Cadastre-se agora</a>
+    
+    <input type="submit" value="Acessar" class="btn"/>
+    
+    <!-- Aqui vai aparecer o erro -->
+    <p id="erro" style="color: red; display: none;">Preencha todos os campos!</p>
+
+</form>  
+
+    </center>
+    
+    <script>
+    function validarFormulario() {
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("password").value.trim();
+    const erro = document.getElementById("erro");
+
+    if (email === "" || senha === "") {
+        erro.style.display = "block"; // mostra a mensagem de erro
+        return false; // impede o envio do formulário
+    } else {
+        erro.style.display = "none"; // esconde a mensagem
+        alert("Login efetuado!");
+        
+        window.location.href = "index.html"; // redireciona para index.html
+        return false; // evita o envio real do formulário (se não tiver backend ainda)
+    }
+}
+</script>
+
+</body>
+</html>

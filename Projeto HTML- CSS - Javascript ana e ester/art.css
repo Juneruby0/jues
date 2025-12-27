@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+
+:root{
+    --whiteTitle: rgba(255, 255, 255,  0.9);
+    --whiteText: rgba(255, 255, 255, 0.8);
+    --blackTitle: #1b1d1f
+}
+
+body{
+    background-color: black;
+    color: var(--whiteTitle);
+}
+
+button{
+    font-size: .8vw;
+    width: 11vw;
+    height: 3vw;
+    border-radius: 200px;
+    font-weight: 500;
+    letter-spacing: .1vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+p{
+    color: var(--whiteText);
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 2% 4%;
+    z-index: 999;
+}
+
+
+.headerLogo, .headerIcons{
+    flex: 1;
+}
+
+/*.headerLogo img{
+    width: 12%;
+}*/
+
+.headerLogo img {
+    width: 8vw;
+    height: auto;
+}
+
+/*.headerIcon i{
+    width:  12%;
+}*/
+
+.headerIcons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2%;
+}
+
+.headerIcons img {
+    width: 2vw;
+    height: auto;
+    margin-left: 1vw;
+    filter: brightness(0) invert(1);  /*deixa cor escura(preta) pra branca)*/
+}
+
+.headerIcons i {
+    font-size: 1.7vw; /* ou ajuste como quiser */
+    color: white;
+    margin-left: 2vw; /* aumenta o espaço entre os ícones */
+    cursor: pointer;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.slide.active{
+    z-index: 2;
+    opacity: 1;
+}
+
+.slide:nth-child(1){
+    background-image: url(imgart4.jpg);
+}
+
+.slide:nth-child(2){
+    background-image: url(imgart8.jpg);
+}
+
+.slide:nth-child(3){
+    background-image: url(imgart07.jpg);
+}
+
+.slide:nth-child(4){
+    background-image: url(imgart10.jpg);
+}
+
+.slide:nth-child(5){
+    background-image: url(imgart11_\ _\(1_\).jpg);
+}
+
+.slideContent{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.slideContent h2{
+    font-size: 5.9vw;
+    font-weight: 800;
+    width: 100%;
+}
+
+.slideContent h2:nth-child(2){
+    font-size: 1.8vw;
+    font-weight: 800;
+    text-align: center;
+    padding-right: 8px;
+}
+
+.slideContent p{
+    padding-bottom: 0 0 1vw 0;
+    width: 63%;
+}
+
+.divButton{
+    display: flex;
+    gap: 4%;
+    margin-top: 32px;
+}
+
+.primaryButton{
+    background-color: var(--whiteTitle);
+    color: var(--blackTitle);
+    text-decoration: none; 
+}
+
+.secondaryButton{
+    background-color: rgba(255, 255, 255,  0.056);
+    border: 1.4px solid var(--whiteText);
+    color: var(--whiteText);
+    text-decoration: none;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    z-index: 10;
+}
+
+.bullets{
+    display: flex;
+    gap: 1.2%;
+    width: 50%;
+}
+
+.bullets li{ 
+    list-style-type: none; 
+    content: "";
+    width: 1.4vw;
+    height: .3vw;
+    background-color: var(--whiteText);
+    border-radius: 200px;
+    opacity: .5;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.bullets li.active{
+    opacity: 1;
+}
+
+.bullets li:hover:not(li.active){
+    opacity: .8;
+}
+
+.navButtons {
+    display: flex;
+    gap: 2%;
+    width: 50%;
+    justify-content: end;
+}
+
+.navButtons button{
+    width: 3vw;
+}
+.slideContent a {
+    text-decoration: none;
+    color: var(--blackTitle);
+}
+
+.secondaryButton a{
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer .copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    width: 100%;
+    text-align: center;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 13px;
+    color: #888;
+}
+
+footer .copyright p{
+    color: white;
+}

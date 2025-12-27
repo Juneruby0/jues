@@ -1,0 +1,110 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.body{
+    overflow-x: hidden;
+    background-color: #000000; 
+    padding: 0 2vw;
+    user-select: none;
+}
+header{
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+header div:nth-child(1) img{
+    width: 180px;
+    margin-top: 20px;
+}
+header div:nth-child(3) ul{
+  display: flex;
+  font-weight: bold;
+  color: #f8f8f7;
+  font-size: 13px;
+
+}
+header div:nth-child(2) ul{
+    display: flex;
+    font-weight: bold;
+    color: #f8f8f7;
+    font-size: 13px;
+    padding: 10px 50vw;
+}
+header div:nth-child(2) li a{
+    color: white;
+    text-decoration: none;
+}
+header div:nth-child(2) ul li, header div:nth-child(3) ul li{
+
+    margin: 0 5px;
+    padding: 5px 20px;
+    border: 1.5px solid transparent;
+    border-radius: 20px;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+
+header div:nth-child(2) ul li:first-child, header div:nth-child(3) ul li:last-child{
+    border: .5px solid white
+}
+
+header div:nth-child(2) ul li:hover, header div:nth-child(3) ul li:hover{
+    border: 1.5px solid white;
+}
+/* A parte da pesquisar os produtos */
+.pesquisa{
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    background-color: #000006;
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #4b4b4b;
+}
+.pesquisa input{
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.pesquisa label{
+    height: 20px;
+}
+/* os produtos mais escolhidos */
+.produto{
+    width: 255px;
+    height: 395px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(196, 196, 196);
+    border-color: none;
+}
+
+.produto:hover{
+    transform: scale(1.1);
+    transition-duration: 0.45s;
+    transition-timing-function: ease-in-out;
+}
+
+.produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que as imagens quebrem de linha se a tela for pequena */
+    gap: 160px; /* Espaço entre as imagens */
+    width: 100%;
+}
+
+.text1{
+    align-items: center;
+}
